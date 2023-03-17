@@ -72,7 +72,6 @@ export default {
   },
   methods: {
     remove(id) {
-      console.log(id);
       const index = this.movements.findIndex((m) => m.id === id);
       this.movements.splice(index, 1);
       this.save();
@@ -82,7 +81,6 @@ export default {
       this.save();
     },
     select(el) {
-      console.log(el);
       this.amount = el;
     },
     save() {

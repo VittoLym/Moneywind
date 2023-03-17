@@ -1,7 +1,7 @@
 <template>
   <div>
     <main class="splashScreen">
-      <img src="@/assets/logo.png" alt="Company logo" />
+      <img src="@/assets/favicon.png" alt="Company logo" />
     </main>
     <h1><span>Money</span>Wind</h1>
   </div>

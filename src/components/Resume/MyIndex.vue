@@ -53,7 +53,6 @@ p {
 }
 h1 {
   margin-top: 1.5%;
-  color: var(--brand-green);
 }
 .graphic {
   display: flex;

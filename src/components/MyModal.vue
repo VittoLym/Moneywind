@@ -30,7 +30,7 @@ const close = () => emit("close");
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  padding: 3% 3% 7% 0;
+  padding: 2% 3% 6% 0;
   box-sizing: border-box;
 }
 p {

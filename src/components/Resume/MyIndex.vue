@@ -52,7 +52,7 @@ p {
   text-align: center;
 }
 h1 {
-  margin-top: 14px;
+  margin-top: 1.5%;
   color: var(--brand-green);
 }
 .graphic {
@@ -63,5 +63,20 @@ h1 {
   padding: 48px 2%;
   box-sizing: border-box;
   flex-direction: column;
+}
+@media (min-width: 900px) {
+  p {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+  }
+  .graphic {
+    padding-top: 3%;
+    padding-bottom: 0;
+  }
+  main {
+    height: 100vh;
+  }
 }
 </style>

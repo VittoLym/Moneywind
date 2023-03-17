@@ -64,4 +64,11 @@ const showMovements = ref(false);
   background-color: #333;
   border-radius: 4px;
 }
+@media (min-width: 890px) {
+  .header,
+  .resume,
+  .movements {
+    padding: 0;
+  }
+}
 </style>

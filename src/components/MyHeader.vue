@@ -36,4 +36,26 @@ h1 {
 h1 span {
   color: #242424;
 }
+
+/* Estilos para pantallas medianas y grandes */
+@media (min-width: 688px) {
+  header {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  img,
+  span {
+    width: 13%;
+  }
+  h1 {
+    font-size: 3.6rem;
+  }
+  @media (min-width: 890px) {
+    header {
+      margin: 0;
+      padding: 0;
+    }
+  }
+}
 </style>

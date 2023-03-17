@@ -17,10 +17,14 @@
         </div>
         <div class="field">
           <label class="radio-label">
-            <input type="radio" v-model="movementType" value="Ingreso" />
-            <span>Ingreso</span>
-            <input type="radio" v-model="movementType" value="Gasto" />
-            <span>Gasto</span>
+            <div class="input_radio">
+              <input type="radio" v-model="movementType" value="Ingreso" />
+              <span>Ingreso</span>
+            </div>
+            <div class="input_radio">
+              <input type="radio" v-model="movementType" value="Gasto" />
+              <span>Gasto</span>
+            </div>
           </label>
         </div>
         <div class="action">
@@ -87,15 +91,19 @@ textarea {
   border: 2px solid #525252;
   border-radius: 8px;
   padding: 8px;
-  text-align: right;
+  text-align: left;
 }
 .radio-label {
   display: flex;
+  justify-content: center;
   align-items: center;
   margin-top: 8px;
 }
 .radio-label span {
   margin-top: 4px;
+}
+.input_radio {
+  width: 20%;
 }
 input[type="radio"] {
   appearance: none;
@@ -108,5 +116,8 @@ input[type="radio"] {
 }
 input[type="radio"]:checked {
   background-color: #649;
+}
+.radio-label {
+  height: 50%;
 }
 </style>

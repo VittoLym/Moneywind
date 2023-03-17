@@ -28,4 +28,25 @@ img {
   margin: 0 20%;
   justify-content: center;
 }
+
+@media screen and (min-width: 960px) and (max-height: 12000px) {
+  .splashScreen {
+    height: 40vh;
+    margin-top: 10%;
+  }
+  h1 {
+    color: #629;
+    margin: 0;
+    margin-top: 8vh;
+    width: 100%;
+    font-size: 500%;
+  }
+  h1 span {
+    color: #242424;
+  }
+  img {
+    height: 50vh;
+    margin: 0;
+  }
+}
 </style>

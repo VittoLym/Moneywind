@@ -1,32 +1,38 @@
 <template>
-  <div class="Movements">
+  <div class="Movements" :key="movements">
     <h2 class="title">Historial</h2>
-    <div class="content">
+    <div class="content" v-if="movements.length">
       <movement
         v-for="{ id, title, amount, description } in movements"
+        :key="id"
         :id="new Date(id)"
-        :key="new Date(id).toISOString()"
         :title="title"
         :amount="amount"
         :description="description"
-        @remove="remove"
+        @remove="handleRemove(id)"
       />
     </div>
+    <p v-else>No hay movimientos</p>
   </div>
 </template>
+
 <script setup>
 import { toRefs, defineProps, defineEmits } from "vue";
 import movement from "./MyMovement.vue";
+
 const props = defineProps({
   movements: {
     type: Array,
     default: () => [],
   },
 });
+
 const emit = defineEmits(["remove"]);
-const remove = (id) => {
+
+const handleRemove = (id) => {
   emit("remove", id);
 };
+
 const { movements } = toRefs(props);
 </script>
 <style scoped>

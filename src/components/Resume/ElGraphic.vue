@@ -1,5 +1,9 @@
 <template>
   <svg
+    @click="Click"
+    @mousemove="Clicky"
+    @mouseleave="unTap"
+    @mouseup="unTap"
     @touchstart.passive="tap"
     @touchmove.passive="tap"
     @touchend="unTap"
@@ -60,6 +64,27 @@ watch(pointer, (Value) => {
   emit("select", amounts.value[index - 1]);
 });
 const emit = defineEmits(["select"]);
+const show = ref(false);
+const Click = (click) => {
+  const target = click.target;
+  const elementRect = target.getBoundingClientRect();
+  const elementX = elementRect.x;
+  const elementWidth = elementRect.width;
+  if (elementWidth <= 0 || isNaN(elementWidth)) {
+    return;
+  }
+  const clientX = click.clientX;
+  showPointer.value = true;
+  pointer.value = ((clientX - elementX) * 300) / elementWidth;
+  show.value = true;
+};
+const Clicky = () => {
+  if (show.value) {
+    showPointer.value = true;
+  } else if (show.value == false) {
+    showPointer.value = false;
+  }
+};
 const tap = ({ target, touches }) => {
   const elementRect = target.getBoundingClientRect();
   const elementX = elementRect.x;

@@ -63,7 +63,7 @@ export default {
     },
   },
   mounted() {
-    const movements = localStorage.getItem("movements");
+    const movements = JSON.parse(localStorage.getItem("movements"));
     if (Array.isArray(movements)) {
       this.movements = movements.map((m) => {
         return { ...m, time: new Date(m.time) };
@@ -71,6 +71,9 @@ export default {
     }
   },
   methods: {
+    save() {
+      localStorage.setItem("movements", JSON.stringify(this.movements));
+    },
     remove(id) {
       const index = this.movements.findIndex((m) => m.id === id);
       this.movements.splice(index, 1);
@@ -83,10 +86,6 @@ export default {
     select(el) {
       this.amount = el;
     },
-    save() {
-      localStorage.setItem("movements", JSON.stringify(this.movements));
-    },
   },
 };
 </script>
-<style scoped></style>

@@ -4,8 +4,8 @@
     <div class="content">
       <movement
         v-for="{ id, title, amount, description } in movements"
-        :key="id"
-        :id="id"
+        :id="new Date(id)"
+        :key="new Date(id).toISOString()"
         :title="title"
         :amount="amount"
         :description="description"

@@ -45,6 +45,7 @@ const showMovements = ref(false);
   background-color: #181818;
   box-shadow: 0 -8px 16px #242424;
   border-radius: 24px;
+  overflow: hidden;
 }
 .movements .head {
   display: flex;

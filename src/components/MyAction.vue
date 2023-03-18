@@ -1,5 +1,5 @@
 <template>
-  <button @click="showModal = true">Nuevo Movimiento</button>
+  <button @click="showModal = true" class="button2">Nuevo Movimiento</button>
   <Teleport to="#app">
     <MyModal v-show="showModal" @close="showModal = false">
       <form @submit.prevent="submit">
@@ -59,6 +59,9 @@ const submit = () => {
 };
 </script>
 <style scoped>
+.button2 {
+  margin-top: 12%;
+}
 button {
   color: white;
   font-size: 1.25rem;

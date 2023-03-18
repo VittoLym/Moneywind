@@ -44,7 +44,12 @@ const { movements } = toRefs(props);
   display: flex;
   flex-direction: column;
   gap: 8px;
-  overflow-y: scroll;
+  overflow: hidden;
   color: aquamarine;
+}
+.content p {
+  max-width: 75%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 </style>
